@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Sayım</title>
+    <link rel="stylesheet" href="stoksayim.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="fisno-container">
+                <label for="fisNo">Fiş No:</label>
+                <span id="fisNo" class="fisno-display" ondblclick="editFisNo()">1</span>
+                <div id="fisNoEdit" class="fisno-edit" style="display: none;">
+                    <input type="number" id="fisNoInput" min="1" value="1">
+                    <button onclick="saveFisNo()">✓</button>
+                    <button onclick="cancelFisNo()">✗</button>
+                </div>
+            </div>
+            <h2>Stok Sayım</h2>
+        </div>
+        <div class="user-info">
+            <span id="userDisplay"></span>
+            <button onclick="logout()" class="logout-btn">Çıkış Yap</button>
+        </div>
+        <div class="input-section">
+            <input type="text" id="barkod" class="form-control" placeholder="Barkod okutunuz...">
+        </div>
+
+        <div class="list-section">
+            <table id="stokTable">
+                <thead>
+                    <tr>
+                        <th>Barkod</th>
+                        <th>Ürün Adı</th>
+                        <th>Giriş</th>
+                        <th>Çıkış</th>
+                        <th>Mevcut Miktar</th>
+                        <th>Miktar</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody id="stokList">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="stoksayim.js"></script>
+</body>
+</html> 

@@ -1,0 +1,215 @@
+/* Reset ve temel stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #0F1419;
+    line-height: 1.5;
+}
+
+/* Login container */
+.login-container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Sol taraf - Logo ve marka alanı */
+.brand-side {
+    background-color: #1DA1F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-side i {
+    color: #ffffff;
+    font-size: 320px;
+    opacity: 0.9;
+}
+
+/* Sağ taraf - Login formu */
+.login-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.login-box {
+    width: 100%;
+}
+
+.login-header {
+    margin-bottom: 32px;
+}
+
+.login-header i {
+    color: #1DA1F2;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.login-header h2 {
+    font-size: 31px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.login-header p {
+    color: #536471;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-icon {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #CFD9DE;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #1DA1F2;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(29, 161, 242, 0.2);
+}
+
+select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23536471' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+    padding-right: 48px;
+    color: #0F1419;
+    background-color: #ffffff;
+}
+
+select.form-control option {
+    background-color: #ffffff;
+    color: #0F1419;
+}
+
+.error-message {
+    background-color: #FFE8EC;
+    color: #F4245E;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    background-color: #1DA1F2;
+    color: #ffffff;
+    border: none;
+    border-radius: 9999px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #1A8CD8;
+}
+
+.login-footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #536471;
+    font-size: 13px;
+}
+
+/* Responsive tasarım */
+@media (max-width: 1024px) {
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .brand-side {
+        display: none;
+    }
+
+    .login-side {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-header h2 {
+        font-size: 24px;
+    }
+
+    .login-side {
+        padding: 16px;
+    }
+
+    .form-control {
+        padding: 12px;
+    }
+
+    .login-btn {
+        padding: 12px;
+    }
+}
+
+/* Karanlık mod */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #15202B;
+        color: #ffffff;
+    }
+
+    .form-control {
+        background-color: transparent;
+        border-color: #38444D;
+        color: #ffffff;
+    }
+
+    select.form-control,
+    select.form-control option {
+        background-color: #ffffff;
+        color: #0F1419;
+    }
+
+    .form-control:focus {
+        border-color: #1DA1F2;
+    }
+
+    .login-header p {
+        color: #8899A6;
+    }
+
+    .error-message {
+        background-color: rgba(244, 36, 94, 0.1);
+    }
+}

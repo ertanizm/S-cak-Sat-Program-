@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Sayım - Giriş</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="brand-side">
+            <i class="fas fa-warehouse"></i>
+        </div>
+        <div class="login-side">
+            <div class="login-box">
+                <div class="login-header">
+                    <i class="fas fa-warehouse"></i>
+                    <h2>Stok Sayım Sistemine Hoş Geldiniz</h2>
+                    <p>Devam etmek için giriş yapın</p>
+                </div>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <select id="userSelect" class="form-control" required>
+                            <option value="">Kullanıcı Seçiniz</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" class="form-control" placeholder="Şifre" required>
+                    </div>
+                    <div id="errorMessage" class="error-message" style="display: none;">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <span></span>
+                    </div>
+                    <button type="submit" class="login-btn">Giriş Yap</button>
+                </form>
+                <div class="login-footer">
+                    <p>© 2024 Stok Sayım Sistemi. Tüm hakları saklıdır.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html> 
