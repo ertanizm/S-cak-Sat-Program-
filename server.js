@@ -37,9 +37,9 @@ app.use(express.static('public'));
 // MSSQL bağlantı ayarları
 const config = {
     user: 'sa',
-    password: '01041976',
+    password: 'your_password',
     server: '192.168.2.81',
-    database: 'AtiaErp',
+    database: 'your_database',
     options: {
         encrypt: false,
         trustServerCertificate: true
